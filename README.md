@@ -2,17 +2,28 @@
 Week 4 Assessment for GEOL0069 AI4EO
 ## Table of Contents
 - [Overview](#overview)
-- [Getting Started](#getting_start)
+- [Getting Started](#getting-started)
   - [Prerequisite](#prerequisite)
-- [Unsupervised Learning](#unsupervised_learning)
+- [Unsupervised Learning](#unsupervised-learning)
   - [K-Mean](#k-mean)
-  - [Gaussian Mixture Models (GMM)](#GMM)
+  - [Gaussian Mixture Models (GMM)](#gaussian-mixture-models-gmm)
 - [Application](#application)
-  - [Image Classification](#image_class)
-  - [Altimetry Classification](#alti_class)
+  - [Image Classification](#image-classification)
+  - [Altimetry Classification](#altimetry-classification)
 - [Visualisation](#visualisation)
-- [Waveform Alignment Using Cross-Correlation](#waveform_align)
-- [Compare with ESA data](#compare_esa)
+- [Waveform Alignment Using Cross-Correlation](#waveform-alignment-using-cross-correlation)
+- [Compare with ESA data](#compare-with-esa-data)
 
 ## Overview
-testing
+## Getting Started
+### Prerequisite
+## Unsupervised Learning
+### K-Mean
+### Gaussian Mixture Models (GMM)
+## Application
+### Image Classification
+### Altimetry Classification
+## Visualisation
+## Waveform Alignment Using Cross-Correlation
+## Compare with ESA data
+
