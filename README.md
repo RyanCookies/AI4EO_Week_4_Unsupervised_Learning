@@ -13,7 +13,6 @@
 - [Application](#application)
   - [Image Classification](#image-classification)
   - [Altimetry Classification](#altimetry-classification)
-- [Visualisation](#visualisation)
 - [Waveform Alignment Using Cross-Correlation](#waveform-alignment-using-cross-correlation)
 - [Compare with ESA data](#compare-with-esa-data)
 - [References](#references)
@@ -98,17 +97,56 @@ graph TD;
 In this example, we used three bands in Sentinel-2 imagery for the classification. The band images were stacked to create a mask with only non-zero values for both K-Mean and GMM.
 
 #### K-Mean Implementation
-The data was reshaped for the K-Mean implementation, and two clusters (k = 2) were defined. The result is shown below.
+The data was reshaped for the K-Mean implementation, and two clusters (k = 2) were defined. The result is shown below:
+<p align="center">
+  <img src="images/S2_K-Mean.jpg" alt="K-Mean on Sentinel-2 satellite image" width="800" height="auto"/>
+</p>
 
 #### GMM Implementation
-The data was reshaped for the GMM implementation. Similar to K-Mean, two components were defined. The result is shown below.
+The data was reshaped for the GMM implementation, and two components were defined. The result is shown below:
+<p align="center">
+  <img src="images/S2_GMM.jpg" alt="GMM on Sentinel-2 satellite image" width="800" height="auto"/>
+</p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Altimetry Classification
 In this example, the altimetry dataset from Sentinel-3 was used to classify sea ice and lead. Since the waveform of the back-scattering radar depends on the surface type, the abrupt change in the surface properties of leads allows them to be detected through properties like peakiness and stack standard deviation (SSD) (von Albedyll et al., 2024).
-<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Visualisation
+<div align="center">
+  <figure>
+  <img src="images/Lee-et-al-2018-lead_and_sea-ice_altimetry.png" alt="Difference between sea ice and lead altimetry data" width="600" height="auto"/><br>
+  <figcaption style="text-align:center;">Representative waveforms of (a) leads and (b)sea ice (Lee et al., 2018)</figcaption>
+  </figure>
+</div>
+<br>
+
+The raw satellite dataset was first transformed into meaningful variables like peakiness and stack standard deviation. Then, the `NaN` values were removed before implementing K-Mean and GMM.
+
+#### K-Mean Implementation
+
+#### GMM Implementation
+Similar to the image classification, two components were defined for the GMM. The GMM would then classify the sea ice and leads into two clusters. The mean and standard deviation of the two clusters are shown below:
+<div align="center">
+  <figure>
+  <img src="images/Lee-et-al-2018-lead_and_sea-ice_altimetry.png" alt="Meand and SD of sea ice and lead altimetry data" width="600" height="auto"/><br>
+  <figcaption style="text-align:center;">Representative waveforms of (a) leads and (b)sea ice (Lee et al., 2018)</figcaption>
+  </figure>
+</div>
+<br> 
+
+The echos from the altimetry dataset, as well as the classified echos, are shown below:
+<div align="center">
+  <figure>
+  <img src="images/Lee-et-al-2018-lead_and_sea-ice_altimetry.png" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
+  <figcaption style="text-align:center;">True waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
+  </figure>
+</div>
+<div align="center">
+  <figure>
+  <img src="images/Lee-et-al-2018-lead_and_sea-ice_altimetry.png" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
+  <figcaption style="text-align:center;">Normalized waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
+  </figure>
+</div>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Waveform Alignment Using Cross-Correlation
