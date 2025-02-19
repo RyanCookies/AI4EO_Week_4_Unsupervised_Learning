@@ -69,9 +69,9 @@ graph TD;
 ```
 
 ### Gaussian Mixture Models (GMM)
-Gaussian Mixture Models (GMM) are a probabilistic model for representing normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (Reynolds, 2009). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions through the combination of simpler ones.
+Gaussian Mixture Models (GMMs) are probabilistic models for representing normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (Reynolds, 2009). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions by combining simpler ones.
 #### Why Gaussian Mixture Models for Clustering?
-- It offers soft clustering and understanding of the uncertainties by providing the probability of each data point belonging to each cluster.
+- It offers soft clustering and helps us understand the uncertainties by providing the probability that each data point belongs to each cluster.
 - Its flexibility in cluster covariance allows clusters to have different sizes and shapes to capture the true variance in the data.
 #### Advantages of GMM
 - Soft Clustering
@@ -95,6 +95,9 @@ graph TD;
 
 ### Image Classification
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+#### K-Mean Implementation
+In this example, we will use three bands in Sentinel-2 imagery for the classification. First, the band images will be stacked to create a mask with only non-zero values. Then, the data will be reshaped for the K-Mean implementation. Two clusters (k = 2) were defined, and the result is shown below.
 
 ### Altimetry Classification
 <p align="right">(<a href="#top">back to top</a>)</p>
