@@ -148,6 +148,15 @@ The echos from the altimetry dataset, as well as the classified echos, are shown
   <figcaption style="text-align:center;">Normalized waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
   </figure>
 </div>
+<br>
+Alternatively, the clustering result can be visualised by scatter plots:
+<div align="center">
+  <figure>
+  <img src="images/S3_GMM_Scatter_Plot.jpg" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
+  <figcaption style="text-align:center;">Scatter plots of GMM clustering results. (a) Backscatter coefficient (σ₀) vs Pulse Peakiness (PP), (b) Backscatter coefficient (σ₀) vs Stack Standard Deviation (SSD), and (c) Pulse Peakiness (PP) vs Stack Standard Deviation (SSD). The clusters are labelled as Sea Ice (blue) and Leads (red) based on GMM classification.</figcaption>
+  </figure>
+</div>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Waveform Alignment Using Cross-Correlation
