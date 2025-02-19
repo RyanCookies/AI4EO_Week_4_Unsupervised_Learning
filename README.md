@@ -46,7 +46,7 @@ These directories are **not included** in this repository.
 ## Unsupervised Learning
 
 ### K-Mean
-K-means clustering divides a dataset into k predefined groups (or clusters). It classifies the data points based on the similarity of the features of the data (MacQueen, 1967). The basic idea is to define k centroids, one for each cluster, and then assign each data point to the nearest centroid while keeping the centroids as small as possible.
+K-means clustering divides a dataset into k predefined groups (or clusters). It classifies the data points based on their similarity to the features of the data (MacQueen, 1967). The basic idea is to define k centroids, one for each cluster, and assign each data point to the nearest centroid while keeping the centroids as small as possible.
 #### Why K-means for Clustering?
 - No prior knowledge about the data distribution or structure is needed, making it ideal for exploratory data analysis.<br>
 - It is simple to implement and can scale to large datasets relatively easily.
