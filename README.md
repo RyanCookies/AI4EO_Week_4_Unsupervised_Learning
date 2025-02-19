@@ -19,7 +19,7 @@
 </details>
 
 ## Overview
-In previous weeks, we used labelled images to perform supervised learning to classify sea ice and lead through Convolutional Neural Network, Random Forest and Vision Transformer. This week, we will adopt another approach: unsupervised learning. Unlike supervised learning, this approach does not require labelled datasets to learn; instead, it will discover structures or patterns in the data without prior instruction. In this project, we will first introduce the K-mean Clustering Algorithm and Gaussian Mixture Models. Then, use these two classification methods on images from Sentinel-2 and altimetry data from Sentinel-3 to classify sea ice and lead. Lastly, the results will be compared with the classification by ESA. 
+In previous weeks, we used labelled images to perform supervised learning to classify sea ice and lead through Convolutional Neural Network, Random Forest and Vision Transformer. This week, we will adopt another approach: unsupervised learning. Unlike supervised learning, this approach does not require labelled datasets to learn; instead, it will discover structures or patterns in the data without prior instruction. In this project, we will first introduce the K-mean Clustering Algorithm and Gaussian Mixture Models. Then, apply these two classification methods on images from Sentinel-2 and altimetry data from Sentinel-3 to classify sea ice and lead. Lastly, the results will be compared with the classification by ESA. 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
@@ -46,11 +46,15 @@ These directories are **not included** in this repository.
 ## Unsupervised Learning
 
 ### K-Mean
-K-means clustering partitions a dataset into a set of k groups (or clusters), where k represents the number of groups pre-specified by the analyst. It classifies the data points based on the similarity of the features of the data {cite}macqueen1967some. The basic idea is to define k centroids, one for each cluster, and then assign each data point to the nearest centroid while keeping the centroids as small as possible.
+K-means clustering divides a dataset into k predefined groups (or clusters). It classifies the data points based on the similarity of the features of the data (MacQueen, 1967). The basic idea is to define k centroids, one for each cluster, and then assign each data point to the nearest centroid while keeping the centroids as small as possible.
 #### Why K-means for Clustering?
-K-means clustering is particularly well-suited for applications where: <br>
-- The structure of the data is not known beforehand: K-means doesn’t require any prior knowledge about the data distribution or structure, making it ideal for exploratory data analysis.<br>
-- Simplicity and scalability: The algorithm is straightforward to implement and can scale to large datasets relatively easily.
+- No prior knowledge about the data distribution or structure is needed, making it ideal for exploratory data analysis.<br>
+- It is simple to implement and can scale to large datasets relatively easily.
+
+#### Advantages of K-means
+- High Computational Efficiency
+- Easy to Interpret
+
 #### Key Components of K-means and The Iterative Process
 ```mermaid
 graph TD;
@@ -62,12 +66,28 @@ graph TD;
     F -->|Yes. New centroids location| D;
     F -->|No. The algorithm converges, and the within-cluster variation is minimised| G[End];
 ```
-#### Advantages of K-means
-- Efficiency: K-means is computationally efficient.
-- Ease of interpretation: The results of k-means clustering are easy to understand and interpret.
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Gaussian Mixture Models (GMM)
+Gaussian Mixture Models (GMM) are a probabilistic model for representing normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (Reynolds, 2009). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions through the combination of simpler ones.
+#### Why Gaussian Mixture Models for Clustering?
+- It offers soft clustering and understanding of the uncertainties by providing the probability of each data point belonging to each cluster.
+- Its flexibility in cluster covariance allows clusters to have different sizes and shapes to capture the true variance in the data.
+#### Advantages of GMM
+- Soft Clustering
+- Cluster Shape Flexibility
+
+#### Key Components of GMM and The Expectation-Maximization (EM) Algorithm
+
+```mermaid
+graph TD;
+    A[Start] --> B["Specify Number of Components (Gaussians)"];
+    B --> C["EM Algorithm: <br> Expectation Step (E-step)<br>  Calculate probability of data point in each cluster"];
+    C --> D["EM Algorithm: <br> Maximization Step (M-step)<br> Update Gaussians parameters to maximize the likelihood of the data given these assignments"];
+    D --> E[Coverged?];
+    E --> |Yes| F[Covariance Type:<br> Determine the shape, size, and orientation of the clusters];
+    E --> |No| C;
+    F --> G[End]
+```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Application
