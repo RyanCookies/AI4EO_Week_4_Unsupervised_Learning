@@ -16,6 +16,7 @@
 - [Visualisation](#visualisation)
 - [Waveform Alignment Using Cross-Correlation](#waveform-alignment-using-cross-correlation)
 - [Compare with ESA data](#compare-with-esa-data)
+- [References](#references)
 </details>
 
 ## Overview
@@ -105,4 +106,7 @@ graph TD;
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Compare with ESA data
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## References
 <p align="right">(<a href="#top">back to top</a>)</p>
