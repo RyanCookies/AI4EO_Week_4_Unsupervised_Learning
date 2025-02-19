@@ -128,8 +128,8 @@ The raw satellite dataset was first transformed into meaningful variables like p
 Similar to the image classification, two components were defined for the GMM. The GMM would then classify the sea ice and leads into two clusters. The mean and standard deviation of the two clusters are shown below:
 <div align="center">
   <figure>
-  <img src="images/Lee-et-al-2018-lead_and_sea-ice_altimetry.png" alt="Meand and SD of sea ice and lead altimetry data" width="600" height="auto"/><br>
-  <figcaption style="text-align:center;">Representative waveforms of (a) leads and (b)sea ice (Lee et al., 2018)</figcaption>
+  <img src="images/S3_GMM_mean-SD.jpg" width="600" height="auto"/><br>
+  <figcaption style="text-align:center;">The mean and standard deviation of the echos of sea ice and leads</figcaption>
   </figure>
 </div>
 <br> 
@@ -137,13 +137,14 @@ Similar to the image classification, two components were defined for the GMM. Th
 The echos from the altimetry dataset, as well as the classified echos, are shown below:
 <div align="center">
   <figure>
-  <img src="images/Lee-et-al-2018-lead_and_sea-ice_altimetry.png" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
+  <img src="images/S3_GMM_Echos.jpg" width="900" height="auto"/><br>
   <figcaption style="text-align:center;">True waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
   </figure>
 </div>
+<br>
 <div align="center">
   <figure>
-  <img src="images/Lee-et-al-2018-lead_and_sea-ice_altimetry.png" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
+  <img src="images/S3_GMM_Normalised_Echos.jpg" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
   <figcaption style="text-align:center;">Normalized waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
   </figure>
 </div>
