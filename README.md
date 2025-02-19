@@ -67,6 +67,7 @@ graph TD;
     F -->|Yes. New centroids location| D;
     F -->|No. The algorithm converges, and the within-cluster variation is minimised| G[End];
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Gaussian Mixture Models (GMM)
 Gaussian Mixture Models (GMMs) are probabilistic models for representing normally distributed subpopulations within an overall population. The model assumes that the data is generated from a mixture of several Gaussian distributions, each with its own mean and variance (Reynolds, 2009). GMMs are widely used for clustering and density estimation, as they provide a method for representing complex distributions by combining simpler ones.
