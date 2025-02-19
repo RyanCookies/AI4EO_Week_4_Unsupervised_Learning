@@ -105,7 +105,7 @@ The data was reshaped for the GMM implementation. Similar to K-Mean, two compone
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Altimetry Classification
-In this example, the altimetry dataset from Sentinel-3 was used to classify sea ice and lead. Since the waveform of the back-scattering radar depends on the surface type, the abrupt change in the surface properties of leads allows them to be detected through properties like peakiness and stack standard deviation (SSD).
+In this example, the altimetry dataset from Sentinel-3 was used to classify sea ice and lead. Since the waveform of the back-scattering radar depends on the surface type, the abrupt change in the surface properties of leads allows them to be detected through properties like peakiness and stack standard deviation (SSD) (von Albedyll et al., 2024).
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Visualisation
