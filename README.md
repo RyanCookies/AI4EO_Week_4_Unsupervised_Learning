@@ -94,10 +94,14 @@ graph TD;
 ## Application
 
 ### Image Classification
-<p align="right">(<a href="#top">back to top</a>)</p>
+In this example, we used three bands in Sentinel-2 imagery for the classification. The band images were stacked to create a mask with only non-zero values for both K-Mean and GMM.
 
 #### K-Mean Implementation
-In this example, we will use three bands in Sentinel-2 imagery for the classification. First, the band images will be stacked to create a mask with only non-zero values. Then, the data will be reshaped for the K-Mean implementation. Two clusters (k = 2) were defined, and the result is shown below.
+The data was reshaped for the K-Mean implementation, and two clusters (k = 2) were defined. The result is shown below.
+
+#### GMM Implementation
+The data was reshaped for the GMM implementation. Similar to K-Mean, two components were defined. The result is shown below.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Altimetry Classification
 <p align="right">(<a href="#top">back to top</a>)</p>
