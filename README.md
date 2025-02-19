@@ -99,13 +99,13 @@ In this example, we used three bands in Sentinel-2 imagery for the classificatio
 #### K-Mean Implementation
 The data was reshaped for the K-Mean implementation, and two clusters (k = 2) were defined. The result is shown below:
 <p align="center">
-  <img src="images/S2_K-Mean.jpg" alt="K-Mean on Sentinel-2 satellite image" width="800" height="auto"/>
+  <img src="images/S2_K-Mean.jpg" alt="K-Mean on Sentinel-2 satellite image" width="600" height="auto"/>
 </p>
 
 #### GMM Implementation
 The data was reshaped for the GMM implementation, and two components were defined. The result is shown below:
 <p align="center">
-  <img src="images/S2_GMM.jpg" alt="GMM on Sentinel-2 satellite image" width="800" height="auto"/>
+  <img src="images/S2_GMM.jpg" alt="GMM on Sentinel-2 satellite image" width="600" height="auto"/>
 </p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
