@@ -46,6 +46,25 @@ These directories are **not included** in this repository.
 ## Unsupervised Learning
 
 ### K-Mean
+K-means clustering partitions a dataset into a set of k groups (or clusters), where k represents the number of groups pre-specified by the analyst. It classifies the data points based on the similarity of the features of the data {cite}macqueen1967some. The basic idea is to define k centroids, one for each cluster, and then assign each data point to the nearest centroid while keeping the centroids as small as possible.
+#### Why K-means for Clustering?
+K-means clustering is particularly well-suited for applications where: <br>
+- The structure of the data is not known beforehand: K-means doesn’t require any prior knowledge about the data distribution or structure, making it ideal for exploratory data analysis.<br>
+- Simplicity and scalability: The algorithm is straightforward to implement and can scale to large datasets relatively easily.
+#### Key Components of K-means and The Iterative Process
+```mermaid
+graph TD;
+    A[Start] --> B["Specify Number of Cluster (K)"];
+    B --> C[Centroids Initialization];
+    C --> D[Assignment Step: Assign each data point to its nearest centroid based on the squared Euclidean distance];
+    D --> E[Update Step: Recompute centroids as the centre of all the data points assigned to the respective cluster];
+    E --> F[Iteration Process: Centroids move significantly?]
+    F -->|Yes. New centroids location| D;
+    F -->|No. The algorithm converges, and the within-cluster variation is minimised| G[End];
+```
+#### Advantages of K-means
+- Efficiency: K-means is computationally efficient.
+- Ease of interpretation: The results of k-means clustering are easy to understand and interpret.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Gaussian Mixture Models (GMM)
