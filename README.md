@@ -27,8 +27,8 @@ This project will be conducted on Google Colab, which provides free GPU access a
 ### Prerequisite
 To read the satellite data, you need to install the following packages before running the code:
 ```python
-pip install rasterio
-pip install netCDF4
+!pip install rasterio
+!pip install netCDF4
 ```
 Run the following codes to mount your Google Drive to the Jupyter Notebook.
 ```python
