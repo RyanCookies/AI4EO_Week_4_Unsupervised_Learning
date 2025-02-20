@@ -233,7 +233,7 @@ The result is shown below:
 The result is shown below:
 <div align="center">
   <figure>
-  <img src="images/S3_GMM_aligned_mean-SD" width="600" height="auto"/><br>
+  <img src="images/S3_GMM_aligned_mean-SD.jpg" width="600" height="auto"/><br>
   <figcaption style="text-align:center;">The average echo shape and standard deviation of the two classes in aligned GMM classified waveforms.</figcaption>
   </figure>
 </div>
