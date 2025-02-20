@@ -7,14 +7,16 @@
 - [Overview](#overview)
 - [Getting Started](#getting-started)
   - [Prerequisite](#prerequisite)
-- [Unsupervised Learning](#unsupervised-learning)
+- [Unsupervised Learning Methods](#unsupervised-learning-methods)
   - [K-Mean](#k-mean)
   - [Gaussian Mixture Models (GMM)](#gaussian-mixture-models-gmm)
 - [Application](#application)
   - [Image Classification](#image-classification)
   - [Altimetry Classification](#altimetry-classification)
 - [Waveform Alignment Using Cross-Correlation](#waveform-alignment-using-cross-correlation)
-- [Compare with ESA data](#compare-with-esa-data)
+- [Assessment Part](#assessment-part)
+  - [Average Echos and Standard Deviation](#average-echos-and-standard-deviation)
+  - [Compare with ESA data](#compare-with-esa-data)
 - [References](#references)
 </details>
 
@@ -43,7 +45,7 @@ S3A_SR_2_LAN_SI_20190307T005808_20190307T012503_20230527T225016_1614_042_131____
 These directories are **not included** in this repository. 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Unsupervised Learning
+## Unsupervised Learning Methods
 
 ### K-Mean
 K-means clustering divides a dataset into k predefined groups (or clusters). It classifies the data points based on their similarity to the features of the data (MacQueen, 1967). The basic idea is to define k centroids, one for each cluster, and assign each data point to the nearest centroid while keeping the centroids as small as possible.
@@ -123,6 +125,37 @@ In this example, the altimetry dataset from Sentinel-3 was used to classify sea 
 The raw satellite dataset was first transformed into meaningful variables like peakiness and stack standard deviation. Then, the `NaN` values were removed before implementing K-Mean and GMM.
 
 #### K-Mean Implementation
+Similar to the image classification, two clusters were defined for the K-Mean Clustering. The K-Mean Algorithm would then classify the sea ice and leads into two clusters. The mean and standard deviation of the two clusters are shown below:
+<div align="center">
+  <figure>
+  <img src="images/S3_K-Mean_mean-SD.jpg" width="600" height="auto"/><br>
+  <figcaption style="text-align:center;">The mean and standard deviation of the echos of sea ice and leads</figcaption>
+  </figure>
+</div>
+<br> 
+
+The echos from the altimetry dataset, as well as the classified echos, are shown below:
+<div align="center">
+  <figure>
+  <img src="images/S3_K-Mean_Echos.jpg" width="900" height="auto"/><br>
+  <figcaption style="text-align:center;">True waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
+  </figure>
+</div>
+<br>
+<div align="center">
+  <figure>
+  <img src="images/S3_K-Mean_Normalised_Echos.jpg" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
+  <figcaption style="text-align:center;">Normalized waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
+  </figure>
+</div>
+<br>
+Alternatively, the clustering result can be visualised by scatter plots:
+<div align="center">
+  <figure>
+  <img src="images/S3_K-Mean_Scatter_Plot.jpg" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
+  <figcaption style="text-align:center;">Scatter plots of GMM clustering results. (a) Backscatter coefficient (σ₀) vs Pulse Peakiness (PP), (b) Backscatter coefficient (σ₀) vs Stack Standard Deviation (SSD), and (c) Pulse Peakiness (PP) vs Stack Standard Deviation (SSD). The clusters are labelled as Sea Ice (blue) and Leads (red) based on GMM classification.</figcaption>
+  </figure>
+</div>
 
 #### GMM Implementation
 Similar to the image classification, two components were defined for the GMM. The GMM would then classify the sea ice and leads into two clusters. The mean and standard deviation of the two clusters are shown below:
@@ -160,9 +193,17 @@ Alternatively, the clustering result can be visualised by scatter plots:
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Waveform Alignment Using Cross-Correlation
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Compare with ESA data
+## Assessment Part
+
+### Average Echos and Standard Deviation
+#### K-Mean
+#### GMM 
+### Compare with ESA data
+#### K-Mean
+#### GMM 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## References
