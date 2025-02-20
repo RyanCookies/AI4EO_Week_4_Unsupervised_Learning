@@ -18,6 +18,7 @@
   - [Average Echos and Standard Deviation](#average-echos-and-standard-deviation)
   - [Compare with ESA data](#compare-with-esa-data)
 - [References](#references)
+- [Contact](#contact)
 </details>
 
 ## Overview
@@ -261,5 +262,10 @@ MacQueen, J. (1967). Some methods for classification and analysis of multivariat
 Reynolds, D. (2009). Gaussian Mixture Models. *In S. Z. Li & A. Jain (Eds.), Encyclopedia of Biometrics* (pp. 659–663). Springer US. [https://doi.org/10.1007/978-0-387-73003-5_196](https://doi.org/10.1007/978-0-387-73003-5_196)
 
 von Albedyll, L., Hendricks, S., Hutter, N., Murashkin, D., Kaleschke, L., Willmes, S., Thielke, L., Tian-Kunze, X., Spreen, G., & Haas, C. (2024). Lead fractions from SAR-derived sea ice divergence during MOSAiC. *The Cryosphere, 18*(3), 1259–1285. [https://doi.org/10.5194/tc-18-1259-2024](https://doi.org/10.5194/tc-18-1259-2024)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contact 
+Po Wang Lam - po.lam.24@ucl.ac.uk
 
 <p align="right">(<a href="#top">back to top</a>)</p>
