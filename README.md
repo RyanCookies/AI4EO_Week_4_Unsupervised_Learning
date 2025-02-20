@@ -198,7 +198,7 @@ Due to the shifting of the sea ice, the altimetry data would also experience a p
 The aligned echos of all sea ice and leads are shown below:
 <div align="center">
   <figure>
-  <img src="images/S3_K-Mean_Align_Wave.jpg" width="600" height="auto"/><br>
+  <img src="images/S3_K-Mean_Align_Wave.jpg" width="800" height="auto"/><br>
   <figcaption style="text-align:center;">The aligned waveform of sea ice and leads for K-Mean Clustering.</figcaption>
   </figure>
 </div>
@@ -207,7 +207,7 @@ The aligned echos of all sea ice and leads are shown below:
 The aligned echos of all sea ice and leads are shown below:
 <div align="center">
   <figure>
-  <img src="images/S3_GMM_Align_Wave.jpg" width="600" height="auto"/><br>
+  <img src="images/S3_GMM_Align_Wave.jpg" width="800" height="auto"/><br>
   <figcaption style="text-align:center;">The aligned waveform of sea ice and leads for GMM.</figcaption>
   </figure>
 </div>
@@ -224,7 +224,7 @@ Recalculate the mean and standard deviation for both K-Mean and GMM with the ali
 The result is shown below:
 <div align="center">
   <figure>
-  <img src="images/S3_K-Mean_aligned_mean-SD.jpg" width="600" height="auto"/><br>
+  <img src="images/S3_K-Mean_aligned_mean-SD.jpg" width="800" height="auto"/><br>
   <figcaption style="text-align:center;">The average echo shape and standard deviation of the two classes in aligned K-Mean classified waveforms.</figcaption>
   </figure>
 </div>
@@ -233,7 +233,7 @@ The result is shown below:
 The result is shown below:
 <div align="center">
   <figure>
-  <img src="images/S3_GMM_aligned_mean-SD.jpg" width="600" height="auto"/><br>
+  <img src="images/S3_GMM_aligned_mean-SD.jpg" width="800" height="auto"/><br>
   <figcaption style="text-align:center;">The average echo shape and standard deviation of the two classes in aligned GMM classified waveforms.</figcaption>
   </figure>
 </div>
@@ -245,7 +245,7 @@ As the title suggests, the clustering results of K-Mean and GMM were compared wi
 #### K-Mean and GMM
 <div align="center">
   <figure>
-  <img src="images/KMean-GMM_Conf_Matrix.jpg" width="600" height="auto"/><br>
+  <img src="images/KMean-GMM_Conf_Matrix.jpg" width="800" height="auto"/><br>
   <figcaption style="text-align:center;">The confusion matrices for K-Means and GMM classifications against ESA reference labels.</figcaption>
   </figure>
 </div>
