@@ -21,7 +21,7 @@
 </details>
 
 ## Overview
-In previous weeks, we used labelled images to perform supervised learning to classify sea ice and lead through Convolutional Neural Network, Random Forest and Vision Transformer. This week, we will adopt another approach: unsupervised learning. Unlike supervised learning, this approach does not require labelled datasets to learn; instead, it will discover structures or patterns in the data without prior instruction. In this project, we will first introduce the K-mean Clustering Algorithm and Gaussian Mixture Models. Then, apply these two classification methods on images from Sentinel-2 and altimetry data from Sentinel-3 to classify sea ice and lead. Lastly, the results will be compared with the classification by ESA. 
+In previous weeks, we used labelled images to perform supervised learning to classify sea ice and lead through Convolutional Neural Network, Random Forest and Vision Transformer. This week, we will adopt another approach: unsupervised learning. Unlike supervised learning, this approach does not require labelled datasets to learn; instead, it will discover structures or patterns in the data without prior instruction. In this project, we will first introduce the K-mean Clustering Algorithm and Gaussian Mixture Models. Then, apply these two classification methods on images from Sentinel-2 and altimetry data from Sentinel-3 to classify sea ice and lead. Lastly, the results will be compared with the classification by ESA. Only the results are included in this README. Please go to the Jupyter Notebook for the codes.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
@@ -101,13 +101,13 @@ In this example, we used three bands in Sentinel-2 imagery for the classificatio
 #### K-Mean Implementation
 The data was reshaped for the K-Mean implementation, and two clusters (k = 2) were defined. The result is shown below:
 <p align="center">
-  <img src="images/S2_K-Mean.jpg" alt="K-Mean on Sentinel-2 satellite image" width="600" height="auto"/>
+  <img src="images/S2_K-Mean.jpg" width="600" height="auto"/>
 </p>
 
 #### GMM Implementation
 The data was reshaped for the GMM implementation, and two components were defined. The result is shown below:
 <p align="center">
-  <img src="images/S2_GMM.jpg" alt="GMM on Sentinel-2 satellite image" width="600" height="auto"/>
+  <img src="images/S2_GMM.jpg" width="600" height="auto"/>
 </p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -116,7 +116,7 @@ In this example, the altimetry dataset from Sentinel-3 was used to classify sea 
 
 <div align="center">
   <figure>
-  <img src="images/Lee-et-al-2018-lead_and_sea-ice_altimetry.png" alt="Difference between sea ice and lead altimetry data" width="600" height="auto"/><br>
+  <img src="images/Lee-et-al-2018-lead_and_sea-ice_altimetry.png" width="600" height="auto"/><br>
   <figcaption style="text-align:center;">Representative waveforms of (a) leads and (b)sea ice (Lee et al., 2018)</figcaption>
   </figure>
 </div>
@@ -125,7 +125,7 @@ In this example, the altimetry dataset from Sentinel-3 was used to classify sea 
 The raw satellite dataset was first transformed into meaningful variables like peakiness and stack standard deviation. Then, the `NaN` values were removed before implementing K-Mean and GMM.
 
 #### K-Mean Implementation
-Similar to the image classification, two clusters were defined for the K-Mean Clustering. The K-Mean Algorithm would then classify the sea ice and leads into two clusters. The mean and standard deviation of the two clusters are shown below:
+Similar to the image classification, two clusters were defined for the K-Mean Clustering. The K-Mean Algorithm would then classify the sea ice and leads into two clusters. The mean and standard deviation of the two clusters before alignment are shown below:
 <div align="center">
   <figure>
   <img src="images/S3_K-Mean_mean-SD.jpg" width="600" height="auto"/><br>
@@ -144,7 +144,7 @@ The echos from the altimetry dataset, as well as the classified echos, are shown
 <br>
 <div align="center">
   <figure>
-  <img src="images/S3_K-Mean_Normalised_Echos.jpg" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
+  <img src="images/S3_K-Mean_Normalised_Echos.jpg" width="900" height="auto"/><br>
   <figcaption style="text-align:center;">Normalized waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
   </figure>
 </div>
@@ -152,13 +152,13 @@ The echos from the altimetry dataset, as well as the classified echos, are shown
 Alternatively, the clustering result can be visualised by scatter plots:
 <div align="center">
   <figure>
-  <img src="images/S3_K-Mean_Scatter_Plot.jpg" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
+  <img src="images/S3_K-Mean_Scatter_Plot.jpg" width="900" height="auto"/><br>
   <figcaption style="text-align:center;">Scatter plots of GMM clustering results. (a) Backscatter coefficient (σ₀) vs Pulse Peakiness (PP), (b) Backscatter coefficient (σ₀) vs Stack Standard Deviation (SSD), and (c) Pulse Peakiness (PP) vs Stack Standard Deviation (SSD). The clusters are labelled as Sea Ice (blue) and Leads (red) based on GMM classification.</figcaption>
   </figure>
 </div>
 
 #### GMM Implementation
-Similar to the image classification, two components were defined for the GMM. The GMM would then classify the sea ice and leads into two clusters. The mean and standard deviation of the two clusters are shown below:
+Similar to the image classification, two components were defined for the GMM. The GMM would then classify the sea ice and leads into two clusters. The mean and standard deviation of the two clusters before alignment are shown below:
 <div align="center">
   <figure>
   <img src="images/S3_GMM_mean-SD.jpg" width="600" height="auto"/><br>
@@ -177,7 +177,7 @@ The echos from the altimetry dataset, as well as the classified echos, are shown
 <br>
 <div align="center">
   <figure>
-  <img src="images/S3_GMM_Normalised_Echos.jpg" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
+  <img src="images/S3_GMM_Normalised_Echos.jpg" width="900" height="auto"/><br>
   <figcaption style="text-align:center;">Normalized waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
   </figure>
 </div>
@@ -185,7 +185,7 @@ The echos from the altimetry dataset, as well as the classified echos, are shown
 Alternatively, the clustering result can be visualised by scatter plots:
 <div align="center">
   <figure>
-  <img src="images/S3_GMM_Scatter_Plot.jpg" alt="Difference between sea ice and lead altimetry data" width="900" height="auto"/><br>
+  <img src="images/S3_GMM_Scatter_Plot.jpg" width="900" height="auto"/><br>
   <figcaption style="text-align:center;">Scatter plots of GMM clustering results. (a) Backscatter coefficient (σ₀) vs Pulse Peakiness (PP), (b) Backscatter coefficient (σ₀) vs Stack Standard Deviation (SSD), and (c) Pulse Peakiness (PP) vs Stack Standard Deviation (SSD). The clusters are labelled as Sea Ice (blue) and Leads (red) based on GMM classification.</figcaption>
   </figure>
 </div>
@@ -193,18 +193,71 @@ Alternatively, the clustering result can be visualised by scatter plots:
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Waveform Alignment Using Cross-Correlation
+Due to the shifting of the sea ice, the altimetry data would also experience a positional shift. In order to produce a scientifically meaningful result, the altimetry data need to be aligned before averaging. In this example, the altimetry data was aligned by the peak using cross-correlation. 
+### K-Mean
+The aligned echos of all sea ice and leads are shown below:
+<div align="center">
+  <figure>
+  <img src="images/S3_K-Mean_Align_Wave.jpg" width="600" height="auto"/><br>
+  <figcaption style="text-align:center;">The aligned waveform of sea ice and leads for K-Mean Clustering.</figcaption>
+  </figure>
+</div>
+
+### GMM
+The aligned echos of all sea ice and leads are shown below:
+<div align="center">
+  <figure>
+  <img src="images/S3_GMM_Align_Wave.jpg" width="600" height="auto"/><br>
+  <figcaption style="text-align:center;">The aligned waveform of sea ice and leads for GMM.</figcaption>
+  </figure>
+</div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Assessment Part
-
+Tasks:
+1. Classify the echoes in leads and sea ice and produce an average echo shape as well as standard deviation for these two classes 
+2. Quantify your echo classification against the ESA official classification using a confusion matrix
 ### Average Echos and Standard Deviation
+Recalculate the mean and standard deviation for both K-Mean and GMM with the aligned waveforms.
 #### K-Mean
+The result is shown below:
+<div align="center">
+  <figure>
+  <img src="images/S3_K-Mean_aligned_mean-SD.jpg" width="600" height="auto"/><br>
+  <figcaption style="text-align:center;">The average echo shape and standard deviation of the two classes in aligned K-Mean classified waveforms.</figcaption>
+  </figure>
+</div>
+
 #### GMM 
+The result is shown below:
+<div align="center">
+  <figure>
+  <img src="images/S3_GMM_aligned_mean-SD" width="600" height="auto"/><br>
+  <figcaption style="text-align:center;">The average echo shape and standard deviation of the two classes in aligned GMM classified waveforms.</figcaption>
+  </figure>
+</div>
+
 ### Compare with ESA data
-#### K-Mean
-#### GMM 
+As the title suggests, the clustering results of K-Mean and GMM were compared with the classification of ESA, and the comparisons were visualised using confusion matrices.
+#### K-Mean and GMM
+<div align="center">
+  <figure>
+  <img src="images/KMean-GMM_Conf_Matrix.jpg" width="600" height="auto"/><br>
+  <figcaption style="text-align:center;">The confusion matrices for K-Means and GMM classifications against ESA reference labels.</figcaption>
+  </figure>
+</div>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## References
+
+Lee, S., Kim, H., & Im, J. (2018). Arctic lead detection using a waveform mixture algorithm from CryoSat-2 data. *The Cryosphere, 12*, 1665–1679. [https://doi.org/10.5194/tc-12-1665-2018](https://doi.org/10.5194/tc-12-1665-2018)
+
+MacQueen, J. (1967). Some methods for classification and analysis of multivariate observations. *In Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability, Volume 1: Statistics: Vol. 5.1* (pp. 281–298). University of California Press. [https://projecteuclid.org/ebooks/berkeley-symposium-on-mathematical-statistics-and-probability/Proceedings-of-the-Fifth-Berkeley-Symposium-on-Mathematical-Statistics-and/chapter/Some-methods-for-classification-and-analysis-of-multivariate-observations/bsmsp/1200512992](https://projecteuclid.org/ebooks/berkeley-symposium-on-mathematical-statistics-and-probability/Proceedings-of-the-Fifth-Berkeley-Symposium-on-Mathematical-Statistics-and/chapter/Some-methods-for-classification-and-analysis-of-multivariate-observations/bsmsp/1200512992)
+
+Reynolds, D. (2009). Gaussian Mixture Models. *In S. Z. Li & A. Jain (Eds.), Encyclopedia of Biometrics* (pp. 659–663). Springer US. [https://doi.org/10.1007/978-0-387-73003-5_196](https://doi.org/10.1007/978-0-387-73003-5_196)
+
+von Albedyll, L., Hendricks, S., Hutter, N., Murashkin, D., Kaleschke, L., Willmes, S., Thielke, L., Tian-Kunze, X., Spreen, G., & Haas, C. (2024). Lead fractions from SAR-derived sea ice divergence during MOSAiC. *The Cryosphere, 18*(3), 1259–1285. [https://doi.org/10.5194/tc-18-1259-2024](https://doi.org/10.5194/tc-18-1259-2024)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
