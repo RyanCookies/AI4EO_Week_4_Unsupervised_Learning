@@ -112,7 +112,7 @@ The data was reshaped for the GMM implementation, and two components were define
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Altimetry Classification
-In this example, the altimetry dataset from Sentinel-3 was used to classify sea ice and lead. Since the waveform of the back-scattering radar depends on the surface type, the abrupt change in the surface properties of leads allows them to be detected through properties like peakiness and stack standard deviation (SSD) (von Albedyll et al., 2024).
+In this example, the altimetry dataset from Sentinel-3 was used to classify sea ice and lead. Since the waveform of the back-scattering echoes depends on the surface type, the abrupt change in the surface properties of leads allows them to be detected through properties like peakiness and stack standard deviation (SSD) (von Albedyll et al., 2024).
 
 <div align="center">
   <figure>
@@ -138,14 +138,14 @@ The echos from the altimetry dataset, as well as the classified echos, are shown
 <div align="center">
   <figure>
   <img src="images/S3_K-Mean_Echos.jpg" width="900" height="auto"/><br>
-  <figcaption style="text-align:center;">True waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
+  <figcaption style="text-align:center;">True waveforms of echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
   </figure>
 </div>
 <br>
 <div align="center">
   <figure>
   <img src="images/S3_K-Mean_Normalised_Echos.jpg" width="900" height="auto"/><br>
-  <figcaption style="text-align:center;">Normalized waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
+  <figcaption style="text-align:center;">Normalized waveforms of echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
   </figure>
 </div>
 <br>
@@ -171,14 +171,14 @@ The echos from the altimetry dataset, as well as the classified echos, are shown
 <div align="center">
   <figure>
   <img src="images/S3_GMM_Echos.jpg" width="900" height="auto"/><br>
-  <figcaption style="text-align:center;">True waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
+  <figcaption style="text-align:center;">True waveforms of echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
   </figure>
 </div>
 <br>
 <div align="center">
   <figure>
   <img src="images/S3_GMM_Normalised_Echos.jpg" width="900" height="auto"/><br>
-  <figcaption style="text-align:center;">Normalized waveforms of radar echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
+  <figcaption style="text-align:center;">Normalized waveforms of echoes. (a) All echoes from the dataset, (b) echoes identified as leads, and (c) echoes identified as sea ice.</figcaption>
   </figure>
 </div>
 <br>
